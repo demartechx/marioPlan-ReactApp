@@ -15,7 +15,12 @@ const ProjectList = ({projects}) => {
                     </Link>
                 );
             }) :
+            <div className="container white">
                 <InlineLoader />
+                <InlineLoader />
+                <InlineLoader />
+                <InlineLoader />
+            </div>
             }
         </div>
     )
