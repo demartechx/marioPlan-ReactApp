@@ -6,6 +6,8 @@ import ProjectDetails from './components/projects/ProjectDetails'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import CreateProject from './components/projects/CreateProject'
+import inlineLoader from './components/loaders/InlineLoader';
+import pageLoader from './components/loaders/PageLoader';
 
 
 
@@ -17,6 +19,7 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <Switch>
+              <Route path='/load' component={pageLoader} />
               <Route exact path='/' component={Dashboard} />
               <Route path='/project/:id' component={ProjectDetails} />
               <Route path='/signin' component={SignIn} />
